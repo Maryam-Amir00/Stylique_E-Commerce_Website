@@ -4,12 +4,9 @@ import Hero2 from '../assets/hero2.jpg'
 import Hero3 from '../assets/hero3.jpg'
 import Hero4 from '../assets/hero4.jpg'
 
-
-const images = [Hero1, Hero2, Hero3, Hero4];
-
 const Hero = () => {
 
-   
+   const images = [Hero1, Hero2, Hero3, Hero4];
 
    const [current , setCurrent] = useState(0);
 

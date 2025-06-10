@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
+import Hero from './Pages/Hero'
 
 function App() {
 
