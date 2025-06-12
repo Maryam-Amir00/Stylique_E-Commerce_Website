@@ -4,7 +4,7 @@ import { FiShoppingCart, FiX, FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const menuItems = ['Home', 'Shop', 'Categories', 'About', 'Contact'];
+  const menuItems = ['Home', 'Shop' , 'About', 'Contact'];
 
   return (
     <header className="bg-slate-700 text-white shadow-md sticky top-0 z-50">

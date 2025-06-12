@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Pages/Hero'
 import Shop from './Pages/Shop'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Hero />
       <Shop />
+      <Footer />
     </>
   )
 }
