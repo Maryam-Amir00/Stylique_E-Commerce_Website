@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
+import { NavLink } from 'react-router-dom';
 import { FiShoppingCart, FiX, FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -19,14 +20,17 @@ const Navbar = () => {
 
           
           <div className="hidden md:flex items-center space-x-6">
+
             {menuItems.map((item) => (
-              <a
+              <NavLink
                 key={item}
-                href={`#${item.toLowerCase()}`}
-                className="hover:text-slate-400 transition duration-300"
+                to={`/${item.toLowerCase()}`}
+                className={({ isActive }) =>
+                  `hover:text-slate-400 transition duration-300 ${isActive ? 'font-bold underline' : ''}`
+                }
               >
                 {item}
-              </a>
+              </NavLink>
             ))}
             <FiShoppingCart
               size={22}
