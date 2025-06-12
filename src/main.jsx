@@ -7,11 +7,13 @@ import Hero from './Pages/Hero.jsx'
 import Shop from './Pages/Shop.jsx'
 import About from './Pages/About.jsx'
 import Contact from './Pages/Contact.jsx'
+import ProductPage from './Pages/ProductPage.jsx'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element= {<App />}>
-      <Route path='' element = {<><Hero /> <Shop /></>} />
+      <Route index element = {<><Hero /> <Shop /></>} />
       <Route path='home' element = {<><Hero /> <Shop /></>} />
       <Route path='about' element = {<About />} />
       <Route path='contact' element = {<Contact />} />
@@ -23,5 +25,5 @@ const router = createBrowserRouter(
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router = {router}/>
-  </StrictMode>,
+  </StrictMode>
 )
