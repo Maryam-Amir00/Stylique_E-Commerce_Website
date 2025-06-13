@@ -9,6 +9,7 @@ import About from './Pages/About.jsx'
 import Contact from './Pages/Contact.jsx'
 import ProductPage from './Pages/ProductPage.jsx'
 import { shopLoader } from './utils/shopLoader.js'
+import { productLoader } from './utils/ProductLoader.js'
 
 
 const router = createBrowserRouter(
@@ -18,7 +19,7 @@ const router = createBrowserRouter(
       <Route path='home' element = {<><Hero /> <Shop /></>} loader = {shopLoader} />
       <Route path='about' element = {<About />} />
       <Route path='contact' element = {<Contact />} />
-      <Route path='product/:id' element = {<ProductPage />}/>
+      <Route path='product/:id' element = {<ProductPage />} loader={productLoader}/>
     </Route>
   )
 )
