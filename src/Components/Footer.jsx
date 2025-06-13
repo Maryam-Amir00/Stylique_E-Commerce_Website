@@ -83,19 +83,28 @@ const Footer = () => {
 
         {/* Social Media */}
         <div>
-          <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-          <div className="flex space-x-4 text-slate-900">
-            <NavLink to="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition">
-              <FaFacebookF />
-            </NavLink>
-            <NavLink to="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition">
-              <FaTwitter />
-            </NavLink>
-            <NavLink to="#" className="p-2 bg-gray-100 rounded-full hover:bg-gray-300 transition">
-              <FaInstagram />
-            </NavLink>
-          </div>
-        </div>
+  <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+  <div className="flex space-x-4 text-slate-900">
+    <button
+      disabled
+      className="p-2 bg-white rounded-full cursor-not-allowed "
+    >
+      <FaFacebookF />
+    </button>
+    <button
+      disabled
+      className="p-2 bg-white rounded-full cursor-not-allowed "
+    >
+      <FaTwitter />
+    </button>
+    <button
+      disabled
+      className="p-2 bg-white rounded-full cursor-not-allowed "
+    >
+      <FaInstagram />
+    </button>
+  </div>
+</div>
       </div>
       <div className="border-t text-center py-4 text-sm text-gray-400">
         &copy; 2025 Stylique. All rights reserved.

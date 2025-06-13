@@ -79,7 +79,7 @@ const Navbar = () => {
                 smooth
                 to={item.path}
                 className={`hover:text-slate-400 transition duration-300 ${
-                  isActive(item.path, item.name) ? 'font-bold underline' : ''
+                  isActive(item.path, item.name) ? 'font-bold ' : ''
                 }`}
                 onClick={(e) => handleHomeClick(e, item)}
               >
