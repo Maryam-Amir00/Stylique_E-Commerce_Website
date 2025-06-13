@@ -1,4 +1,6 @@
 import React, {useState , useEffect} from 'react'
+import { HashLink as NavLink } from 'react-router-hash-link'
+import { useLocation } from 'react-router-dom';
 import Hero1 from '../assets/hero1.jpg'
 import Hero2 from '../assets/hero2.jpg'
 import Hero3 from '../assets/hero3.jpg'
@@ -9,6 +11,20 @@ const Hero = () => {
    const images = [Hero1, Hero2, Hero3, Hero4];
 
    const [current , setCurrent] = useState(0);
+
+   const location = useLocation();
+
+    useEffect(() => {
+    if (location.hash === '#shop') {
+        const section = document.getElementById('shop');
+        if (section) {
+        setTimeout(() => {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }, 300); // delay for smoothness
+        }
+    }
+    }, [location]);
+
 
    useEffect( ()=> {
      const interval = setInterval(() => {
@@ -30,9 +46,14 @@ const Hero = () => {
               <p className='text-lg md:text-xl mb-6 max-w-xl'>
                   Explore the latest trends and timeless classics curated just for you.
               </p>
-              <button className='bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-400 transition duration-300'>
-                  Shop Now
-              </button>
+              <NavLink
+  smooth
+  to="/#shop"
+  className="inline-block bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-400 transition duration-300"
+>
+  Shop Now
+</NavLink>
+
           </div>
       </div>
    </section>

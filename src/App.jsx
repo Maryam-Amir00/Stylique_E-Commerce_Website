@@ -1,15 +1,13 @@
 import React from 'react'
 import Navbar from './Components/Navbar'
-import Hero from './Pages/Hero'
-import Shop from './Pages/Shop'
 import Footer from './Components/Footer'
 import { Outlet } from 'react-router-dom'
+import ScrollToTop from './Components/ScrollToTop'
 
 function App() {
-
-
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Outlet />
       <Footer />

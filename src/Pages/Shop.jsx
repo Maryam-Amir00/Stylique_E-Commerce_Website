@@ -5,7 +5,7 @@ import { useLoaderData } from 'react-router-dom'
 const Shop = () => {
   const products = useLoaderData();
   const [currentPage , setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 12;
 
   const indexOfLastProduct = currentPage * itemsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
