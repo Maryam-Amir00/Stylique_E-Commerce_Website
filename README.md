@@ -115,11 +115,15 @@ npm run dev
 ---
 
 ## ✅ Future Improvements
--🔐 Add user authentication (Login/Signup)
--🛍️ Implement checkout and payment system
--🧮 Add product filtering and sorting
--🧾 Create order history and user profile pages
--📊 Add admin dashboard and analytics
+- 🔐 Add user authentication (Login/Signup)
+
+- 🛍️ Implement checkout and payment system
+
+- 🧮 Add product filtering and sorting
+
+- 🧾 Create order history and user profile pages
+
+- 📊 Add admin dashboard and analytics
 
 ---
 
