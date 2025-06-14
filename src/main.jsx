@@ -10,6 +10,8 @@ import Contact from './Pages/Contact.jsx'
 import ProductPage from './Pages/ProductPage.jsx'
 import { shopLoader } from './utils/shopLoader.js'
 import { productLoader } from './utils/ProductLoader.js'
+import { CartProvider } from './context/CartContext.jsx'
+import Cart from './Pages/Cart.jsx'
 
 
 const router = createBrowserRouter(
@@ -20,12 +22,15 @@ const router = createBrowserRouter(
       <Route path='about' element = {<About />} />
       <Route path='contact' element = {<Contact />} />
       <Route path='product/:id' element = {<ProductPage />} loader={productLoader}/>
+      <Route path='cart' element={<Cart />} />
     </Route>
   )
 )
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router = {router}/>
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>
 )

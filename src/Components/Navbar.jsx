@@ -3,11 +3,20 @@ import logo from '../assets/logo.png';
 import { HashLink as NavLink } from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom';
 import { FiShoppingCart, FiX, FiMenu } from 'react-icons/fi';
+import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const [activeSection, setActiveSection] = useState('home');
+  const { cart } = useCart();
+  const totalItems = Array.isArray(cart) ? cart.length : 0;
+
+
+
+
 
   const menuItems = [
     { name: 'Home', path: '/' },
@@ -86,10 +95,18 @@ const Navbar = () => {
                 {item.name}
               </NavLink>
             ))}
-            <FiShoppingCart
-              size={22}
-              className="cursor-pointer hover:text-slate-400 transition duration-300"
-            />
+            <Link to="/cart" className={`relative ${location.pathname === '/cart' ? 'text-slate-300' : ''}`}>
+              <FiShoppingCart
+                size={22}
+                className="cursor-pointer hover:text-slate-400 transition duration-300"
+              />
+              {totalItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -125,7 +142,16 @@ const Navbar = () => {
             </NavLink>
           ))}
           <div className="pt-3 border-t border-slate-600 flex">
-            <FiShoppingCart className="hover:text-slate-400" size={22} />
+          <Link to="/cart" className={`relative ${location.pathname === '/cart' ? 'text-slate-300' : ''}`}>
+              <FiShoppingCart className="hover:text-slate-400" size={22} />
+              {totalItems > 0 && (
+                <span className="absolute -top-1 left-4 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+
+
           </div>
         </div>
       )}
