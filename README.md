@@ -1,12 +1,57 @@
-# React + Vite
+# 🛍️ Stylique – Fashion E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Stylique** is a modern, fully responsive fashion e-commerce website built using **React.js**, **Tailwind CSS**, and **React Router**. It features dynamic product listing, a shopping cart, and wishlist functionality using **Context API** and **localStorage** for global state management and persistence.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+👉 [Click Here to View Live Website](https://styliquee.netlify.app/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- 🛍️ Browse fashion products dynamically from API  
+- 🛒 Add to Cart / Remove from Cart  
+- ❤️ Add to Wishlist / Remove from Wishlist  
+- 🔍 View Product Details  
+- 🌍 Global State Management with Context API  
+- 💾 Data Persistence with localStorage  
+- 💡 SPA Routing with React Router DOM  
+- 📱 Fully Responsive Layout with Tailwind CSS  
+
+---
+
+## ⚙️ Tech Stack
+
+- **React.js**  
+- **Tailwind CSS**  
+- **React Router DOM**  
+- **Context API**  
+- **Axios**  
+- **FakeStore API**  
+- **localStorage**  
+
+---
+
+## 📁 Project Structure
+
+stylique/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── axiosInstance.js
+│   ├── ScrollToTop.jsx
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+
+
