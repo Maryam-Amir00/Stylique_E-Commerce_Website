@@ -37,21 +37,7 @@
 
 ## 📁 Project Structure
 
-stylique/
-├── public/
-├── src/
-│ ├── assets/
-│ ├── components/
-│ ├── context/
-│ ├── pages/
-│ ├── App.jsx
-│ ├── main.jsx
-│ ├── axiosInstance.js
-│ ├── ScrollToTop.jsx
-├── tailwind.config.js
-├── vite.config.js
-├── package.json
-└── README.md
+<pre> stylique/ ├── public/ ├── src/ │ ├── assets/ │ ├── components/ │ ├── context/ │ ├── pages/ │ ├── App.jsx │ ├── main.jsx │ ├── axiosInstance.js │ ├── ScrollToTop.jsx ├── tailwind.config.js ├── vite.config.js ├── package.json └── README.md </pre>
 
 
 ---
