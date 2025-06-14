@@ -33,7 +33,10 @@ const Cart = () => {
                 key={item.id}
                 className="flex items-center justify-between bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition"
               >
-                <div className="flex items-center space-x-5">
+                <Link
+                  to={`/product/${item.id}`}
+                  className="flex items-center space-x-5"
+                >
                   <img
                     src={item.image}
                     alt={item.title}
@@ -54,7 +57,8 @@ const Cart = () => {
                       Quantity: {item.quantity}
                     </span>
                   </div>
-                </div>
+                </Link>
+
                 <button
                   onClick={() => removeFromCart(item.id)}
                   className="text-red-500 hover:text-red-700 font-medium text-sm"
