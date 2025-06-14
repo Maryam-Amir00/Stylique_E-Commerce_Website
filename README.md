@@ -1,52 +1,51 @@
-# 🛍️ Stylique – Fashion E-Commerce Website
+# 🛍️ Stylique - Fashion E-commerce Website
 
-**Stylique** is a modern, fully responsive fashion e-commerce website built using **React.js**, **Tailwind CSS**, and **React Router**. It features dynamic product listing, a shopping cart, and wishlist functionality using **Context API** and **localStorage** for global state management and persistence.
+**Stylique** is a dynamic, responsive, and stylish e-commerce web application built with **React**, **React Router**, **Tailwind CSS**, and **Context API**. It offers a seamless shopping experience with real-time cart and wishlist functionality, product details, and a clean modern UI.
 
----
-
-## 🔗 Live Demo
-
-👉 [Click Here to View Live Website](https://styliquee.netlify.app/)
+🎯 **Live Demo**: [Click Here to Visit the Site](https://styliquee.netlify.app/)
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 🛍️ Browse fashion products dynamically from API  
-- 🛒 Add to Cart / Remove from Cart  
-- ❤️ Add to Wishlist / Remove from Wishlist  
-- 🔍 View Product Details  
-- 🌍 Global State Management with Context API  
-- 💾 Data Persistence with localStorage  
-- 💡 SPA Routing with React Router DOM  
-- 📱 Fully Responsive Layout with Tailwind CSS  
-
----
-
-## ⚙️ Tech Stack
-
-- **React.js**  
-- **Tailwind CSS**  
-- **React Router DOM**  
-- **Context API**  
-- **Axios**  
-- **FakeStore API**  
-- **localStorage**  
+- 🏠 Dynamic Hero Section
+- 🛒 Add to Cart & Wishlist
+- 🧾 Product Details Page
+- 💾 Persistent Cart & Wishlist (LocalStorage)
+- 🔍 Clean and Responsive UI
+- ⚙️ Pagination for Product Listings
+- 🧭 React Router-based Navigation
+- ❤️ Wishlist with toggle support
+- 💨 Smooth scroll to top on route change
 
 ---
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-<pre> stylique/ ├── public/ ├── src/ │ ├── assets/ │ ├── components/ │ ├── context/ │ ├── pages/ │ ├── App.jsx │ ├── main.jsx │ ├── axiosInstance.js │ ├── ScrollToTop.jsx ├── tailwind.config.js ├── vite.config.js ├── package.json └── README.md </pre>
-
+- **Frontend**: React.js, Tailwind CSS
+- **Routing**: React Router DOM
+- **State Management**: Context API
+- **API**: [Fake Store API](https://fakestoreapi.com/)
+- **Icons**: React Icons
+- **Tooling**: Vite
 
 ---
 
-## 🚀 Getting Started
+## 📂 Project Structure
 
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/your-username/stylique.git
-cd stylique
-
+```plaintext
+stylique/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── axiosInstance.js
+│   ├── ScrollToTop.jsx
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
