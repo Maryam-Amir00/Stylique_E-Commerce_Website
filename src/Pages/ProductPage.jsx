@@ -77,24 +77,25 @@ const handleAddToWishlist = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="mt-8 flex items-center space-x-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             {/* Quantity */}
-            <div className="flex items-center border border-slate-300 rounded-full overflow-hidden">
-              <button
+            <div className="flex items-center border border-slate-300 rounded-full overflow-hidden min-w-[120px] shrink-0">
+            <button
                 onClick={decreaseQty}
-                className="px-4 py-2 text-lg font-bold text-slate-700 hover:bg-slate-100"
+                className="px-4 py-2 text-xl font-bold text-slate-700 hover:bg-slate-100"
               >
                 −
               </button>
-              <span className="px-4 text-slate-700 font-semibold">
-                {quantity}
-              </span>
+
+              <span className="px-4 text-slate-700 font-semibold">{quantity}</span>
+
               <button
                 onClick={increaseQty}
-                className="px-4 py-2 text-lg font-bold text-slate-700 hover:bg-slate-100"
+                className="px-4 py-2 text-xl font-bold text-slate-700 hover:bg-slate-100"
               >
                 +
               </button>
+
             </div>
 
             {/* Add to Cart */}
