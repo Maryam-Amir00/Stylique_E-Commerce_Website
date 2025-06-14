@@ -40,16 +40,15 @@
 stylique/
 ├── public/
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── context/
-│   ├── pages/
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── axiosInstance.js
-│   ├── ScrollToTop.jsx
+│ ├── assets/
+│ ├── components/
+│ ├── context/
+│ ├── pages/
+│ ├── App.jsx
+│ ├── main.jsx
+│ ├── axiosInstance.js
+│ ├── ScrollToTop.jsx
 ├── tailwind.config.js
-├── postcss.config.js
 ├── vite.config.js
 ├── package.json
 └── README.md
