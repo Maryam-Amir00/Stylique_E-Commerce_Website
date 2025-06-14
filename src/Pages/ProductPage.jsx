@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import { useLoaderData, Link } from 'react-router-dom';
 import { FiHeart } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
+
 
 const ProductPage = () => {
   const product = useLoaderData();
   const { addToCart } = useCart();
+  const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const isInWishlist = wishlist.some(item => item.id === product.id);
+
+
 
   const [quantity, setQuantity] = useState(1);
 
@@ -16,6 +22,11 @@ const ProductPage = () => {
   const handleAddToCart = () => {
     addToCart({ ...product, quantity });
   };
+
+
+const handleAddToWishlist = () => {
+  addToWishlist(product);
+};
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
@@ -95,9 +106,19 @@ const ProductPage = () => {
             </button>
 
             {/* Wishlist */}
-            <button className="p-3 rounded-full border border-slate-300 hover:bg-slate-100 transition">
-              <FiHeart className="text-xl text-slate-700" />
+            <button
+              onClick={() =>
+                isInWishlist
+                  ? removeFromWishlist(product.id)
+                  : addToWishlist(product)
+              }
+              className="p-3 rounded-full border border-slate-300 hover:bg-slate-100 transition"
+              title={isInWishlist ? "Remove from Wishlist" : "Add to Wishlist"}
+            >
+              <FiHeart className={`text-xl transition ${isInWishlist ? 'text-red-500' : 'text-slate-700'}`} />
             </button>
+
+
           </div>
         </div>
       </div>

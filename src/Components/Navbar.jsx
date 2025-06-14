@@ -5,6 +5,9 @@ import { useLocation } from 'react-router-dom';
 import { FiShoppingCart, FiX, FiMenu } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import { FiHeart } from 'react-icons/fi';
+import { useWishlist } from '../context/WishlistContext';
+
 
 
 const Navbar = () => {
@@ -13,9 +16,8 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
   const { cart } = useCart();
   const totalItems = Array.isArray(cart) ? cart.length : 0;
-
-
-
+  const { wishlist } = useWishlist();
+  const totalWishlistItems = wishlist.length;
 
 
   const menuItems = [
@@ -106,6 +108,15 @@ const Navbar = () => {
                 </span>
               )}
             </Link>
+            <Link to="/wishlist" className={`relative ${location.pathname === '/wishlist' ? 'text-slate-300' : ''}`}>
+                <FiHeart size={22} className="cursor-pointer hover:text-slate-400 transition duration-300" />
+                {totalWishlistItems > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                    {totalWishlistItems}
+                  </span>
+                )}
+              </Link>
+
 
           </div>
 
@@ -141,18 +152,26 @@ const Navbar = () => {
               {item.name}
             </NavLink>
           ))}
-          <div className="pt-3 border-t border-slate-600 flex">
-          <Link to="/cart" className={`relative ${location.pathname === '/cart' ? 'text-slate-300' : ''}`}>
+          <div className="pt-4 border-t border-slate-600 flex  gap-6 relative">
+            <Link to="/cart" className={`relative ${location.pathname === '/cart' ? 'text-slate-300' : ''}`}>
               <FiShoppingCart className="hover:text-slate-400" size={22} />
               {totalItems > 0 && (
-                <span className="absolute -top-1 left-4 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                   {totalItems}
                 </span>
               )}
             </Link>
 
-
+            <Link to="/wishlist" className={`relative ${location.pathname === '/wishlist' ? 'text-slate-300' : ''}`}>
+              <FiHeart size={22} className="cursor-pointer hover:text-slate-400 transition duration-300" />
+              {totalWishlistItems > 0 && (
+                <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  {totalWishlistItems}
+                </span>
+              )}
+            </Link>
           </div>
+
         </div>
       )}
     </header>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiHeart } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
+
 
 
 const ProductCard = ({ product }) => {
@@ -12,6 +14,19 @@ const ProductCard = ({ product }) => {
     e.preventDefault(); 
     addToCart(product); 
   };
+
+  const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const isInWishlist = wishlist.some(item => item.id === product.id);
+
+  const toggleWishlist = (e) => {
+    e.preventDefault();
+    if (isInWishlist) {
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist(product);
+    }
+  };
+
 
   
   return (
@@ -45,9 +60,14 @@ const ProductCard = ({ product }) => {
           <button onClick={handleAddToCart} className="flex-1 bg-slate-700 text-white py-2 rounded-full text-sm font-semibold hover:bg-slate-600 transition">
             Add to Cart
           </button>
-          <button className="ml-3 text-gray-500 hover:text-red-500 transition">
-            <FiHeart className="text-xl" />
+          <button
+            onClick={toggleWishlist}
+            className="ml-3 transition text-xl"
+            title={isInWishlist ? "Remove from Wishlist" : "Add to Wishlist"}
+          >
+            <FiHeart className={isInWishlist ? "text-red-500" : "text-gray-400 hover:text-red-500"} />
           </button>
+
         </div>
       </div>
     </Link>

@@ -11,7 +11,10 @@ import ProductPage from './Pages/ProductPage.jsx'
 import { shopLoader } from './utils/shopLoader.js'
 import { productLoader } from './utils/ProductLoader.js'
 import { CartProvider } from './context/CartContext.jsx'
+import { WishlistProvider } from './context/WishlistContext.jsx'
+import Wishlist from './Pages/Wishlist.jsx'
 import Cart from './Pages/Cart.jsx'
+
 
 
 const router = createBrowserRouter(
@@ -23,6 +26,7 @@ const router = createBrowserRouter(
       <Route path='contact' element = {<Contact />} />
       <Route path='product/:id' element = {<ProductPage />} loader={productLoader}/>
       <Route path='cart' element={<Cart />} />
+      <Route path='wishlist' element={<Wishlist />} />
     </Route>
   )
 )
@@ -30,7 +34,9 @@ const router = createBrowserRouter(
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartProvider>
-      <RouterProvider router={router} />
+    <WishlistProvider>
+        <RouterProvider router={router} />
+    </WishlistProvider>
     </CartProvider>
   </StrictMode>
 )
