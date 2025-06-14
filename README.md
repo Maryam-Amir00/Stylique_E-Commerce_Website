@@ -66,6 +66,8 @@ stylique/
 ├── package.json
 └── README.md
 
+```
+
 ---
 
 ## 🧪 Getting Started
