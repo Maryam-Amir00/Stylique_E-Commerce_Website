@@ -31,21 +31,38 @@
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```plaintext
 stylique/
 ├── public/
 ├── src/
+│   ├── api/
+│   │   └── axiosInstance.js
 │   ├── assets/
-│   ├── components/
+│   ├── Components/
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── ScrollToTop.jsx
 │   ├── context/
-│   ├── pages/
+│   │   ├── CartContext.jsx
+│   │   └── WishlistContext.jsx
+│   ├── Pages/
+│   │   ├── About.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Hero.jsx
+│   │   ├── ProductPage.jsx
+│   │   ├── Shop.jsx
+│   │   └── Wishlist.jsx
+│   ├── utils/
+│   │   ├── ProductLoader.js
+│   │   └── shopLoader.js
 │   ├── App.jsx
-│   ├── main.jsx
-│   ├── axiosInstance.js
-│   ├── ScrollToTop.jsx
+│   └── main.jsx
 ├── tailwind.config.js
 ├── vite.config.js
 ├── package.json
 └── README.md
+
