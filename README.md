@@ -66,3 +66,17 @@ stylique/
 ├── package.json
 └── README.md
 
+---
+
+## 🧪 Getting Started
+
+Follow these steps to set up the project locally on your machine:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/stylique.git
+cd stylique
+
+
+
