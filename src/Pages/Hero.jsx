@@ -1,10 +1,10 @@
 import React, {useState , useEffect} from 'react'
 import { HashLink as NavLink } from 'react-router-hash-link'
 import { useLocation } from 'react-router-dom';
-import Hero1 from '../assets/hero1.jpg'
-import Hero2 from '../assets/hero2.jpg'
-import Hero3 from '../assets/hero3.jpg'
-import Hero4 from '../assets/hero4.jpg'
+import Hero1 from '../assets/Hero1.jpg'
+import Hero2 from '../assets/Hero2.jpg'
+import Hero3 from '../assets/Hero3.jpg'
+import Hero4 from '../assets/Hero4.jpg'
 
 const Hero = () => {
 
